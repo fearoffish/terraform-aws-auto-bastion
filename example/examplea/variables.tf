@@ -11,3 +11,7 @@ variable "common_tags" {
 variable "instance_type" {
   type = string
 }
+
+variable "allowed_ips" {
+  type = "string"
+}

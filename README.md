@@ -29,9 +29,9 @@ Include this repository as a module in your existing terraform code:
 
 ```hcl
 module "auto-bastion" {
-  source            = "JamesWoolfenden/auto-bastion/aws"
-  version           = "0.0.4"
-  allowed_ips       = [chomp(data.http.myip.body)]
+  source            = "git::https://github.com/fearoffish/auto-bastion.git?ref=0.2.1"
+  version           = "0.2.1"
+  allowed_ips       = "1.2.3.4/24"
   common_tags       = var.common_tags
   vpc_id            = element(data.aws_vpcs.vpc.ids, 0)
   instance_type     = var.instance_type
